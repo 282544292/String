@@ -1,0 +1,21 @@
+EXPORTS
+   ReplaceOutLen
+   Replace
+   Contains
+   IndexOf
+   StartCountIndexOf
+   StartIndexOf
+   StartsWith
+   EndsWith
+   Compare
+   Reverse
+   Trim
+   TrimStr
+   TrimStart
+   TrimStartStr
+   TrimEnd
+   TrimEndStr
+   ToLower
+   ToUpper
+   Substring
+   Concat
