@@ -1,8 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <exception>
-#include <iostream>
-#include <stdexcept>
+#include <string>
 
 enum class StringErrorCode {
   INDEX_OUT_OF_BOUNDS,
