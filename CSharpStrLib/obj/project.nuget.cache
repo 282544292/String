@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qzvhjAiUMjHiUOYOlRu8HEbC29WTYz6R+S2hbc8BZoJKReJa4s7DcHGvkEvanjJy6Dct5Qr4xaj9z2Ls/wQ8JA==",
+  "dgSpecHash": "XPPjJEIVwKv4BR0Dko+ORREcBy9da371GyiKXCo49UEJ2WT/foUNX/P6gFBPx3yrJuQNvESEO30WsPpngJsgpg==",
   "success": true,
-  "projectFilePath": "C:\\String\\CSharpStrLib\\CSharpStrLib.csproj",
+  "projectFilePath": "C:\\MString\\CSharpStrLib\\CSharpStrLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TR\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\7.0.20\\runtime.win-x64.microsoft.dotnet.ilcompiler.7.0.20.nupkg.sha512"
   ],

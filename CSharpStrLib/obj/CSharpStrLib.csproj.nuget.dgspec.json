@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\String\\CSharpStrLib\\CSharpStrLib.csproj": {}
+    "C:\\MString\\CSharpStrLib\\CSharpStrLib.csproj": {}
   },
   "projects": {
-    "C:\\String\\CSharpStrLib\\CSharpStrLib.csproj": {
+    "C:\\MString\\CSharpStrLib\\CSharpStrLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\String\\CSharpStrLib\\CSharpStrLib.csproj",
+        "projectUniqueName": "C:\\MString\\CSharpStrLib\\CSharpStrLib.csproj",
         "projectName": "CSharpStrLib",
-        "projectPath": "C:\\String\\CSharpStrLib\\CSharpStrLib.csproj",
+        "projectPath": "C:\\MString\\CSharpStrLib\\CSharpStrLib.csproj",
         "packagesPath": "C:\\Users\\TR\\.nuget\\packages\\",
-        "outputPath": "C:\\String\\CSharpStrLib\\obj\\",
+        "outputPath": "C:\\MString\\CSharpStrLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TR\\AppData\\Roaming\\NuGet\\NuGet.Config"
