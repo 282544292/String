@@ -19,5 +19,5 @@ private:
 };
 
 namespace stringErrors {
-    StringException index_out_of_bounds(int64_t index, int64_t length);
+    StringException index_out_of_bounds(int64_t index, int64_t lb, int64_t ub);
 } // namespace stringErrors
