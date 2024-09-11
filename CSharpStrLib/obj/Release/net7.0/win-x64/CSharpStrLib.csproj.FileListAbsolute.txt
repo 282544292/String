@@ -9,3 +9,14 @@ C:\String\CSharpStrLib\obj\Release\net7.0\win-x64\CSharpStrLib.dll
 C:\String\CSharpStrLib\obj\Release\net7.0\win-x64\refint\CSharpStrLib.dll
 C:\String\CSharpStrLib\obj\Release\net7.0\win-x64\CSharpStrLib.pdb
 C:\String\CSharpStrLib\obj\Release\net7.0\win-x64\ref\CSharpStrLib.dll
+C:\MString\CSharpStrLib\bin\Release\net7.0\win-x64\CSharpStrLib.deps.json
+C:\MString\CSharpStrLib\bin\Release\net7.0\win-x64\CSharpStrLib.dll
+C:\MString\CSharpStrLib\bin\Release\net7.0\win-x64\CSharpStrLib.pdb
+C:\MString\CSharpStrLib\obj\Release\net7.0\win-x64\CSharpStrLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\MString\CSharpStrLib\obj\Release\net7.0\win-x64\CSharpStrLib.AssemblyInfoInputs.cache
+C:\MString\CSharpStrLib\obj\Release\net7.0\win-x64\CSharpStrLib.AssemblyInfo.cs
+C:\MString\CSharpStrLib\obj\Release\net7.0\win-x64\CSharpStrLib.csproj.CoreCompileInputs.cache
+C:\MString\CSharpStrLib\obj\Release\net7.0\win-x64\CSharpStrLib.dll
+C:\MString\CSharpStrLib\obj\Release\net7.0\win-x64\refint\CSharpStrLib.dll
+C:\MString\CSharpStrLib\obj\Release\net7.0\win-x64\CSharpStrLib.pdb
+C:\MString\CSharpStrLib\obj\Release\net7.0\win-x64\ref\CSharpStrLib.dll

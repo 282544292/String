@@ -170,7 +170,8 @@ char16_t String::get_value(int64_t index) const
 
 void print(const String str)
 {
-    std::wcout << reinterpret_cast<wchar_t *>(str.c_str()) << std::endl;
+    std::wcout << reinterpret_cast<wchar_t *>(str.c_str());
+    std::cout<<std::endl;
 }
 
 String StringMethods::concat(const String &str1, const String &str2)

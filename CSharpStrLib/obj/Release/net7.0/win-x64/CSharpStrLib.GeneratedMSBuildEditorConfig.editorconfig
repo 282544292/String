@@ -12,4 +12,4 @@ build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = CSharpStrLib
-build_property.ProjectDir = C:\String\CSharpStrLib\
+build_property.ProjectDir = C:\MString\CSharpStrLib\

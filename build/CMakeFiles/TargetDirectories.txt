@@ -1,0 +1,3 @@
+C:/MString/build/CMakeFiles/main.dir
+C:/MString/build/CMakeFiles/edit_cache.dir
+C:/MString/build/CMakeFiles/rebuild_cache.dir

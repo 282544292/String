@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_concat.cpp.obj -c C:\\MString\\test\\test_concat.cpp",
+  "file": "C:\\MString\\test\\test_concat.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_concat.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_substring.cpp.obj -c C:\\MString\\test\\test_substring.cpp",
+  "file": "C:\\MString\\test\\test_substring.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_substring.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\src\\errors.cpp.obj -c C:\\MString\\src\\errors.cpp",
+  "file": "C:\\MString\\src\\errors.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\src\\errors.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\src\\string.cpp.obj -c C:\\MString\\src\\string.cpp",
+  "file": "C:\\MString\\src\\string.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\src\\string.cpp.obj"
+}
+]
