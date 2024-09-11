@@ -4,6 +4,7 @@
 #include "../include/allocator.hpp"
 #include "../include/string.hpp"
 #include "../include/errors.hpp"
+#include "../include/import.hpp"
 
 String::String() : _is_sso(true), _length(0)
 {
@@ -72,14 +73,16 @@ String::String(const char16_t *str, int64_t length) : _length(length)
     }
 }
 
-String::String(const String &str) : _length(str._length), _is_sso(str._is_sso)
+String::String(const String &str) : _length(str._length)
 {
-    if (_is_sso)
+    if (_length <= _SSO_BUFFER_SIZE)
     {
-        std::memcpy(_sso_data, str._sso_data, _length + 1);
+        _is_sso = true;
+        std::memcpy(_sso_data, str.c_str(), _length + 1);
     }
     else
     {
+        _is_sso = false;
         _heap_data = memory::zalloc<char16_t>(_length + 1);
         std::memcpy(_heap_data, str._heap_data, _length + 1);
     }
@@ -110,6 +113,12 @@ char16_t *String::c_str() const
         return const_cast<char16_t *>(_sso_data);
     }
     return _heap_data;
+}
+
+void String::set_length(int64_t length)
+{
+    _length = length;
+    set_value(u'\0', _length);
 }
 
 String String::set_value(const char16_t value, int64_t index)
@@ -162,4 +171,144 @@ char16_t String::get_value(int64_t index) const
 void print(const String str)
 {
     std::wcout << reinterpret_cast<wchar_t *>(str.c_str()) << std::endl;
+}
+
+String StringMethods::concat(const String &str1, const String &str2)
+{
+    auto str = String(str1.strlen() + str2.strlen());
+    Concat(str.c_str(), str1.c_str(), str1.strlen(), str2.c_str(), str2.strlen());
+    return str;
+}
+
+String StringMethods::replace(const String &str, const String &old_tr, const String &new_str)
+{
+    int32_t out_len = 0;
+    ReplaceOutLen(&out_len, str.c_str(), str.strlen(), old_tr.c_str(), old_tr.strlen(), new_str.strlen());
+    auto ret = String(out_len);
+    Replace(ret.c_str(), out_len, str.c_str(), str.strlen(), old_tr.c_str(), old_tr.strlen(), new_str.c_str(), new_str.strlen());
+    return ret;
+}
+
+bool StringMethods::contains(const String &str, const String &subStr, bool ignoreCase)
+{
+    uint8_t ret = 0;
+    Contains(&ret, str.c_str(), str.strlen(), subStr.c_str(), subStr.strlen(), ignoreCase);
+    return ret != 0;
+}
+
+int64_t StringMethods::indexof(const String &str, const String &subStr, bool ignoreCase)
+{
+    int32_t ret = -1;
+    IndexOf(&ret, str.c_str(), str.strlen(), subStr.c_str(), subStr.strlen(), ignoreCase);
+    return ret;
+}
+
+int64_t StringMethods::indexof(const String &str, const String &subStr, int64_t start, bool ignoreCase)
+{
+    int32_t ret = -1;
+    StartIndexOf(&ret, str.c_str(), str.strlen(), subStr.c_str(), subStr.strlen(), start, ignoreCase);
+    return ret;
+}
+
+int64_t StringMethods::indexof(const String &str, const String &subStr, int64_t start, int64_t count, bool ignoreCase)
+{
+    int32_t ret = -1;
+    StartCountIndexOf(&ret, str.c_str(), str.strlen(), subStr.c_str(), subStr.strlen(), start, count, ignoreCase);
+    return ret;
+}
+
+bool StringMethods::startswith(const String &str, const String &valStr, bool ignoreCase)
+{
+    uint8_t ret = 0;
+    StartsWith(&ret, str.c_str(), str.strlen(), valStr.c_str(), valStr.strlen(), ignoreCase);
+    return ret != 0;
+}
+
+bool StringMethods::endswith(const String &str, const String &valStr, bool ignoreCase)
+{
+    uint8_t ret = 0;
+    EndsWith(&ret, str.c_str(), str.strlen(), valStr.c_str(), valStr.strlen(), ignoreCase);
+    return ret != 0;
+}
+
+int64_t StringMethods::compare(const String &str1, const String &str2)
+{
+    int32_t ret = 0;
+    Compare(&ret, str1.c_str(), str1.strlen(), str2.c_str(), str2.strlen());
+    return ret;
+}
+
+String StringMethods::reverse(const String &str)
+{
+    auto ret = String(str.strlen());
+    Reverse(ret.c_str(), str.c_str(), str.strlen());
+    return ret;
+}
+
+String StringMethods::trim(const String &str, Side size)
+{
+    int32_t out_len = 0;
+    auto ret = String(str.strlen());
+    switch (size)
+    {
+    case Side::BOTH:
+        Trim(ret.c_str(), &out_len, str.c_str(), str.strlen());
+        break;
+    case Side::LEFT:
+        TrimStart(ret.c_str(), &out_len, str.c_str(), str.strlen());
+        break;
+    case Side::RIGHT:
+        TrimEnd(ret.c_str(), &out_len, str.c_str(), str.strlen());
+        break;
+    }
+    ret.set_length(out_len);
+    return ret;
+}
+
+String StringMethods::trim(const String &str, const String &trim_str, Side size)
+{
+    int32_t out_len = 0;
+    auto ret = String(str.strlen());
+    switch (size)
+    {
+    case Side::BOTH:
+        TrimStr(ret.c_str(), &out_len, str.c_str(), str.strlen(), trim_str.c_str(), trim_str.strlen());
+        break;
+    case Side::LEFT:
+        TrimStartStr(ret.c_str(), &out_len, str.c_str(), str.strlen(), trim_str.c_str(), trim_str.strlen());
+        break;
+    case Side::RIGHT:
+        TrimEndStr(ret.c_str(), &out_len, str.c_str(), str.strlen(), trim_str.c_str(), trim_str.strlen());
+        break;
+    }
+    ret.set_length(out_len);
+    return ret;
+}
+
+String StringMethods::trim(const String &str, const char16_t value, Side size)
+{
+    auto trim_str = String(1);
+    trim_str.set_value(value, 0);
+    return trim(str, trim_str, size);
+}
+
+String StringMethods::tolower(const String &str)
+{
+    auto ret = String(str.strlen());
+    ToLower(ret.c_str(), str.c_str(), str.strlen());
+    return ret;
+}
+
+String StringMethods::toupper(const String &str)
+{
+    auto ret = String(str.strlen());
+    ToUpper(ret.c_str(), str.c_str(), str.strlen());
+    return ret;
+}
+
+String StringMethods::substring(const String &str, int64_t start, int64_t count)
+{
+    auto ret = String(count);
+    Substring(ret.c_str(), str.c_str(), str.strlen(), start, count);
+    return ret;
 }
