@@ -41,21 +41,26 @@ enum Side : int64_t
 
 void print(const String str);
 
+// String 常用函数
 namespace StringMethods
 {
-// String 常用函数
 String concat(const String &str1, const String &str2);
 String replace(const String &str, const String &old_tr, const String &new_str);
 bool contains(const String &str, const String &sub_str, bool ignoreCase);
+// 查找子字符串，返回子字符串的索引，如果没有找到则返回 -1
 int64_t indexof(const String &str, const String &sub_str, bool ignoreCase);
 int64_t indexof(const String &str, const String &sub_str, int64_t start, bool ignoreCase);
 int64_t indexof(const String &str, const String &sub_str, int64_t start, int64_t count, bool ignoreCase);
 bool startswith(const String &str, const String &val_str, bool ignoreCase);
 bool endswith(const String &str, const String &val_str, bool ignoreCase);
+// 比较两个字符串，返回值为 0 表示相等，-1 表示 str1 小于 str2，1 表示 str1 大于 str2
 int64_t compare(const String &str1, const String &str2);
 String reverse(const String &str);
+// 去除字符串两/左/右端的空白字符
 String trim(const String &str, Side size = Side::BOTH);
+// 去除字符串两/左/右端的指定多个字符
 String trim(const String &str, const String &trim_str, Side size = Side::BOTH);
+// 去除字符串两/左/右端的指定字符
 String trim(const String &str, const char16_t value, Side size = Side::BOTH);
 String tolower(const String &str);
 String toupper(const String &str);
