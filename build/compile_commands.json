@@ -1,15 +1,81 @@
 [
 {
   "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_compare.cpp.obj -c C:\\MString\\test\\test_compare.cpp",
+  "file": "C:\\MString\\test\\test_compare.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_compare.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_concat.cpp.obj -c C:\\MString\\test\\test_concat.cpp",
   "file": "C:\\MString\\test\\test_concat.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_concat.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_contains.cpp.obj -c C:\\MString\\test\\test_contains.cpp",
+  "file": "C:\\MString\\test\\test_contains.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_contains.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_endswith.cpp.obj -c C:\\MString\\test\\test_endswith.cpp",
+  "file": "C:\\MString\\test\\test_endswith.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_endswith.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_equals.cpp.obj -c C:\\MString\\test\\test_equals.cpp",
+  "file": "C:\\MString\\test\\test_equals.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_equals.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_indexof.cpp.obj -c C:\\MString\\test\\test_indexof.cpp",
+  "file": "C:\\MString\\test\\test_indexof.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_indexof.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_replace.cpp.obj -c C:\\MString\\test\\test_replace.cpp",
+  "file": "C:\\MString\\test\\test_replace.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_replace.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_reverse.cpp.obj -c C:\\MString\\test\\test_reverse.cpp",
+  "file": "C:\\MString\\test\\test_reverse.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_reverse.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_startswith.cpp.obj -c C:\\MString\\test\\test_startswith.cpp",
+  "file": "C:\\MString\\test\\test_startswith.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_startswith.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_substring.cpp.obj -c C:\\MString\\test\\test_substring.cpp",
   "file": "C:\\MString\\test\\test_substring.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_substring.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_tolower.cpp.obj -c C:\\MString\\test\\test_tolower.cpp",
+  "file": "C:\\MString\\test\\test_tolower.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_tolower.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_toupper.cpp.obj -c C:\\MString\\test\\test_toupper.cpp",
+  "file": "C:\\MString\\test\\test_toupper.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_toupper.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_trim.cpp.obj -c C:\\MString\\test\\test_trim.cpp",
+  "file": "C:\\MString\\test\\test_trim.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_trim.cpp.obj"
 },
 {
   "directory": "C:/MString/build",

@@ -5,6 +5,7 @@
 
 enum class StringErrorCode {
   INDEX_OUT_OF_BOUNDS,
+  OUT_OF_BOUNDS,
 };
 
 class StringException : public std::exception {
@@ -19,4 +20,5 @@ private:
 
 namespace stringErrors {
     StringException index_out_of_bounds(int64_t index, int64_t lb, int64_t ub);
+    StringException out_of_bounds(int64_t val, int64_t lb, int64_t ub);
 } // namespace stringErrors

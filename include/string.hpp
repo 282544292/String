@@ -6,7 +6,7 @@ public:
     String(); // 默认构造函数
     String(int64_t length); // 构造空字符串
     String(const char *str); // 从 C 字符串构造
-    String(char16_t *str, int64_t length); // 从 char16_t 数组构造
+    String(const char16_t *str); // 从 char16_t 数组构造
     String(const String &str); // 拷贝构造函数
     ~String(); // 析构函数
 
@@ -15,6 +15,10 @@ public:
     char16_t get_value(int64_t index) const;
     char16_t *c_str() const;
 
+    // 重载运算符
+    bool operator==(const String &str) const;
+    bool operator!=(const String &str) const;
+
     // 相当于是截断字符串，该操作不会返回新的字符串，而是直接修改原字符串
     void set_length(int64_t length);
 
@@ -22,7 +26,9 @@ public:
     bool is_sso() const;
 
 private:
-    static const int64_t _SSO_BUFFER_SIZE = 48;
+    // 设置字符串的值, 原地修改
+    void _set_value(const char16_t value, int64_t index);
+    static const int64_t _SSO_BUFFER_SIZE = 15;
     union
     {
         char16_t *_heap_data;
@@ -39,20 +45,20 @@ enum Side : int64_t
     BOTH
 };
 
-void print(const String str);
+void print(const String &str);
 
 // String 常用函数
 namespace StringMethods
 {
 String concat(const String &str1, const String &str2);
 String replace(const String &str, const String &old_tr, const String &new_str);
-bool contains(const String &str, const String &sub_str, bool ignoreCase);
+bool contains(const String &str, const String &sub_str, bool ignoreCase = false);
 // 查找子字符串，返回子字符串的索引，如果没有找到则返回 -1
-int64_t indexof(const String &str, const String &sub_str, bool ignoreCase);
-int64_t indexof(const String &str, const String &sub_str, int64_t start, bool ignoreCase);
-int64_t indexof(const String &str, const String &sub_str, int64_t start, int64_t count, bool ignoreCase);
-bool startswith(const String &str, const String &val_str, bool ignoreCase);
-bool endswith(const String &str, const String &val_str, bool ignoreCase);
+int64_t indexof(const String &str, const String &sub_str, bool ignoreCase = false);
+int64_t indexof(const String &str, const String &sub_str, int64_t start, bool ignoreCase = false);
+int64_t indexof(const String &str, const String &sub_str, int64_t start, int64_t count, bool ignoreCase = false);
+bool startswith(const String &str, const String &val_str, bool ignoreCase = false);
+bool endswith(const String &str, const String &val_str, bool ignoreCase = false);
 // 比较两个字符串，返回值为 0 表示相等，-1 表示 str1 小于 str2，1 表示 str1 大于 str2
 int64_t compare(const String &str1, const String &str2);
 String reverse(const String &str);
@@ -64,5 +70,7 @@ String trim(const String &str, const String &trim_str, Side size = Side::BOTH);
 String trim(const String &str, const char16_t value, Side size = Side::BOTH);
 String tolower(const String &str);
 String toupper(const String &str);
-String substring(const String &str, int64_t start, int64_t count);
+// 0-based
+String substring(const String &str, int64_t start, int64_t legnth);
+bool equals(const String &str1, const String &str2);
 }

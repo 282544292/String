@@ -131,6 +131,7 @@ public class String
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
+        int outIndex = -1;
         if (ignoreCase == 1)
         {
             ushort* ptr1 = stackalloc ushort[len];
@@ -141,11 +142,19 @@ public class String
             valueSpan.CopyTo(ptr2Span);
             ToLower(ptr1Span);
             ToLower(ptr2Span);
-            *ret = ptr1Span.Slice(start, count).IndexOf(ptr2Span);
+            outIndex = ptr1Span.Slice(start, count).IndexOf(ptr2Span);
         }
         else
         {
-            *ret = strSpan.Slice(start, count).IndexOf(valueSpan);
+            outIndex = strSpan.Slice(start, count).IndexOf(valueSpan);
+        }
+        if (outIndex == -1)
+        {
+            *ret = -1;
+        }
+        else
+        {
+            *ret = outIndex + start;
         }
     }
 
@@ -154,6 +163,7 @@ public class String
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
+        int outIndex = -1;
         if (ignoreCase == 1)
         {
             ushort* ptr1 = stackalloc ushort[len];
@@ -164,11 +174,19 @@ public class String
             valueSpan.CopyTo(ptr2Span);
             ToLower(ptr1Span);
             ToLower(ptr2Span);
-            *ret = ptr1Span.Slice(start).IndexOf(ptr2Span);
+            outIndex = ptr1Span.Slice(start).IndexOf(ptr2Span);
         }
         else
         {
-            *ret = strSpan.Slice(start).IndexOf(valueSpan);
+            outIndex = strSpan.Slice(start).IndexOf(valueSpan);
+        }
+        if (outIndex == -1)
+        {
+            *ret = -1;
+        }
+        else
+        {
+            *ret = outIndex + start;
         }
     }
 
@@ -257,10 +275,10 @@ public class String
     public static unsafe void Trim(ushort* ret, int* outLen, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
-        var strCpy = new Span<ushort>(ret, len);
-        strSpan.CopyTo(strCpy);
-        strCpy.Trim(whiteSpan);
-        *outLen = strCpy.Length;
+        var strRet = new Span<ushort>(ret, len);
+        var retSpan = strSpan.Trim(whiteSpan);
+        retSpan.CopyTo(strRet);
+        *outLen = retSpan.Length;
     }
 
     [UnmanagedCallersOnly(EntryPoint = "TrimStr")]
@@ -268,20 +286,20 @@ public class String
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
-        var strCpy = new Span<ushort>(ret, len);
-        strSpan.CopyTo(strCpy);
-        strCpy.Trim(valueSpan);
-        *outLen = strCpy.Length;
+        var strRet = new Span<ushort>(ret, len);
+        var retSpan = strSpan.Trim(valueSpan);
+        retSpan.CopyTo(strRet);
+        *outLen = retSpan.Length;
     }
 
     [UnmanagedCallersOnly(EntryPoint = "TrimStart")]
     public static unsafe void TrimStart(ushort* ret, int* outLen, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
-        var strCpy = new Span<ushort>(ret, len);
-        strSpan.CopyTo(strCpy);
-        strCpy.TrimStart(whiteSpan);
-        *outLen = strCpy.Length;
+        var strRet = new Span<ushort>(ret, len);
+        var retSpan = strSpan.TrimStart(whiteSpan);
+        retSpan.CopyTo(strRet);
+        *outLen = retSpan.Length;
     }
 
     [UnmanagedCallersOnly(EntryPoint = "TrimStartStr")]
@@ -289,20 +307,20 @@ public class String
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
-        var strCpy = new Span<ushort>(ret, len);
-        strSpan.CopyTo(strCpy);
-        strCpy.TrimStart(valueSpan);
-        *outLen = strCpy.Length;
+        var strRet = new Span<ushort>(ret, len);
+        var retSpan = strSpan.TrimStart(valueSpan);
+        retSpan.CopyTo(strRet);
+        *outLen = retSpan.Length;
     }
 
     [UnmanagedCallersOnly(EntryPoint = "TrimEnd")]
     public static unsafe void TrimEnd(ushort* ret, int* outLen, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
-        var strCpy = new Span<ushort>(ret, len);
-        strSpan.CopyTo(strCpy);
-        strCpy.TrimEnd(whiteSpan);
-        *outLen = strCpy.Length;
+        var strRet = new Span<ushort>(ret, len);
+        var retSpan = strSpan.TrimEnd(whiteSpan);
+        retSpan.CopyTo(strRet);
+        *outLen = retSpan.Length;
     }
 
     [UnmanagedCallersOnly(EntryPoint = "TrimEndStr")]
@@ -310,10 +328,10 @@ public class String
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
-        var strCpy = new Span<ushort>(ret, len);
-        strSpan.CopyTo(strCpy);
-        strCpy.TrimEnd(valueSpan);
-        *outLen = strCpy.Length;
+        var strRet = new Span<ushort>(ret, len);
+        var retSpan = strSpan.TrimEnd(valueSpan);
+        retSpan.CopyTo(strRet);
+        *outLen = retSpan.Length;
     }
 
     [UnmanagedCallersOnly(EntryPoint = "ToLower")]
@@ -350,5 +368,20 @@ public class String
         var strCpy = new Span<ushort>(ret, lenA + lenB);
         strASpan.CopyTo(strCpy);
         strBSpan.CopyTo(strCpy.Slice(lenA));
+    }
+
+    [UnmanagedCallersOnly(EntryPoint = "Equals")]
+    public static unsafe void Equals(byte *ret, ushort* strA, int lenA, ushort* strB, int lenB)
+    {
+        var strASpan = new Span<ushort>(strA, lenA);
+        var strBSpan = new Span<ushort>(strB, lenB);
+        if (strASpan.SequenceEqual(strBSpan))
+        {
+            *ret = 1;
+        }
+        else
+        {
+            *ret = 0;
+        }
     }
 }

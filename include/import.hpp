@@ -21,3 +21,4 @@ extern "C" __declspec(dllimport) void TrimEndStr(char16_t *ret, int32_t *outLen,
 extern "C" __declspec(dllimport) void ToLower(char16_t *ret, char16_t *str, int32_t len);
 extern "C" __declspec(dllimport) void ToUpper(char16_t *ret, char16_t *str, int32_t len);
 extern "C" __declspec(dllimport) void Substring(char16_t *ret, char16_t *str, int32_t len, int32_t start, int32_t count);
+extern "C" __declspec(dllimport) void Equals(uint8_t *ret, char16_t *str1, int32_t len1, char16_t *str2, int32_t len2);

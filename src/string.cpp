@@ -50,8 +50,9 @@ String::String(const char *str)
     }
 }
 
-String::String(char16_t *str, int64_t length) : _length(length)
+String::String(const char16_t *str)
 {
+    _length = std::char_traits<char16_t>::length(str);
     if (_length > _SSO_BUFFER_SIZE)
     {
         _is_sso = false;
@@ -109,10 +110,38 @@ char16_t *String::c_str() const
     return _heap_data;
 }
 
+bool String::operator==(const String &str) const
+{
+    return StringMethods::equals(*this, str);
+}
+
+bool String::operator!=(const String &str) const
+{
+    return !StringMethods::equals(*this, str);
+}
+
+void String::_set_value(const char16_t value, int64_t index)
+{
+#ifdef DEBUG
+    if (index < 0 || index >= _length)
+    {
+        throw stringErrors::index_out_of_bounds(index, 0, _length);
+    }
+#endif
+    if (_is_sso)
+    {
+        _sso_data[index] = value;
+    }
+    else
+    {
+        _heap_data[index] = value;
+    }
+}
+
 void String::set_length(int64_t length)
 {
     _length = length;
-    set_value(u'\0', _length);
+    _set_value(u'\0', _length);
 }
 
 String String::set_value(const char16_t value, int64_t index)
@@ -124,21 +153,21 @@ String String::set_value(const char16_t value, int64_t index)
     if (_is_sso && index <= _SSO_BUFFER_SIZE)
     {
         auto str = String(std::max(_length, index + 1));
-        memcpy(str.c_str(), _sso_data, _length);
+        memory::memcpy<char16_t>(str.c_str(), _sso_data, _length);
         str._sso_data[index] = value;
         return str;
     }
     else if (!_is_sso && index < _length)
     {
         auto str = String(_length);
-        memcpy(str.c_str(), _heap_data, _length);
+        memory::memcpy<char16_t>(str.c_str(), _heap_data, _length);
         str._heap_data[index] = value;
         return str;
     }
     else
     {
         auto str = String(index + 1);
-        memcpy(str.c_str(), c_str(), _length);
+        memory::memcpy<char16_t>(str.c_str(), c_str(), _length);
         str._heap_data[index] = value;
         return str;
     }
@@ -162,7 +191,7 @@ char16_t String::get_value(int64_t index) const
     }
 }
 
-void print(const String str)
+void print(const String &str)
 {
     std::wcout << reinterpret_cast<wchar_t *>(str.c_str());
     std::cout<<std::endl;
@@ -200,6 +229,10 @@ int64_t StringMethods::indexof(const String &str, const String &subStr, bool ign
 
 int64_t StringMethods::indexof(const String &str, const String &subStr, int64_t start, bool ignoreCase)
 {
+    if (start < 0 || start >= str.strlen())
+    {
+        throw stringErrors::out_of_bounds(start, 0, str.strlen());
+    }
     int32_t ret = -1;
     StartIndexOf(&ret, str.c_str(), str.strlen(), subStr.c_str(), subStr.strlen(), start, ignoreCase);
     return ret;
@@ -207,6 +240,18 @@ int64_t StringMethods::indexof(const String &str, const String &subStr, int64_t 
 
 int64_t StringMethods::indexof(const String &str, const String &subStr, int64_t start, int64_t count, bool ignoreCase)
 {
+    if (count < 0)
+    {
+        throw stringErrors::out_of_bounds(count, 0, INT64_MAX);
+    }
+    if (start < 0 || start >= str.strlen())
+    {
+        throw stringErrors::out_of_bounds(start, 0, str.strlen());
+    }
+    if (start + count > str.strlen())
+    {
+        throw stringErrors::out_of_bounds(start + count, 0, str.strlen());
+    }
     int32_t ret = -1;
     StartCountIndexOf(&ret, str.c_str(), str.strlen(), subStr.c_str(), subStr.strlen(), start, count, ignoreCase);
     return ret;
@@ -282,8 +327,8 @@ String StringMethods::trim(const String &str, const String &trim_str, Side size)
 
 String StringMethods::trim(const String &str, const char16_t value, Side size)
 {
-    auto trim_str = String(1);
-    trim_str.set_value(value, 0);
+    char16_t ch[2] = {value, u'\0'};
+    String trim_str = String(ch);
     return trim(str, trim_str, size);
 }
 
@@ -301,9 +346,28 @@ String StringMethods::toupper(const String &str)
     return ret;
 }
 
-String StringMethods::substring(const String &str, int64_t start, int64_t count)
+String StringMethods::substring(const String &str, int64_t start, int64_t length)
 {
-    auto ret = String(count);
-    Substring(ret.c_str(), str.c_str(), str.strlen(), start, count);
+    if (length < 0)
+    {
+        throw stringErrors::out_of_bounds(length, 0, INT64_MAX);
+    }
+    if (start < 0 || start >= str.strlen())
+    {
+        throw stringErrors::out_of_bounds(start, 0, str.strlen());
+    }
+    if (start + length > str.strlen())
+    {
+        throw stringErrors::out_of_bounds(start + length, 0, str.strlen());
+    }
+    auto ret = String(length);
+    Substring(ret.c_str(), str.c_str(), str.strlen(), start, length);
     return ret;
+}
+
+bool StringMethods::equals(const String &str1, const String &str2)
+{
+    uint8_t ret = 0;
+    Equals(&ret, str1.c_str(), str1.strlen(), str2.c_str(), str2.strlen());
+    return ret != 0;
 }
