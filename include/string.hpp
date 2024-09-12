@@ -6,7 +6,7 @@ public:
     String(); // 默认构造函数
     String(int64_t length); // 构造空字符串
     String(const char *str); // 从 C 字符串构造
-    String(const char16_t *str, int64_t length); // 从 char16_t 数组构造
+    String(char16_t *str, int64_t length); // 从 char16_t 数组构造
     String(const String &str); // 拷贝构造函数
     ~String(); // 析构函数
 

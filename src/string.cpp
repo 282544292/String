@@ -50,25 +50,19 @@ String::String(const char *str)
     }
 }
 
-String::String(const char16_t *str, int64_t length) : _length(length)
+String::String(char16_t *str, int64_t length) : _length(length)
 {
     if (_length > _SSO_BUFFER_SIZE)
     {
         _is_sso = false;
         _heap_data = memory::zalloc<char16_t>(_length + 1);
-        for (int64_t i = 0; i < _length; i++)
-        {
-            _heap_data[i] = str[i];
-        }
+        memory::memcpy<char16_t>(_heap_data, str, _length);
         _heap_data[_length] = u'\0';
     }
     else
     {
         _is_sso = true;
-        for (int64_t i = 0; i < _length; i++)
-        {
-            _sso_data[i] = str[i];
-        }
+        memory::memcpy<char16_t>(_sso_data, str, _length);
         _sso_data[_length] = u'\0';
     }
 }
@@ -78,13 +72,13 @@ String::String(const String &str) : _length(str._length)
     if (_length <= _SSO_BUFFER_SIZE)
     {
         _is_sso = true;
-        std::memcpy(_sso_data, str.c_str(), _length + 1);
+        memory::memcpy<char16_t>(_sso_data, str.c_str(), _length + 1);
     }
     else
     {
         _is_sso = false;
         _heap_data = memory::zalloc<char16_t>(_length + 1);
-        std::memcpy(_heap_data, str._heap_data, _length + 1);
+        memory::memcpy<char16_t>(_heap_data, str._heap_data, _length + 1);
     }
 }
 
