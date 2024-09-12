@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-UTEST(string, indexof)
+TEST(string, indexof)
 {
     String str = String("HELLO WORLD");
     String sub_str = String(u"WORLD");

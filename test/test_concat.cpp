@@ -1,10 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-
-UTEST_MAIN();
-
-UTEST(string, concat)
+TEST(string, concat)
 {
     char16_t str1[] = u"HELLO WORLD";
     char16_t str2[] = u"!";

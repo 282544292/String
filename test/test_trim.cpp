@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-UTEST(string, trim)
+TEST(string, trim)
 {
     char16_t str1[] = u"   HELLO WORLD   ";
     String ret = StringMethods::trim(String(str1));

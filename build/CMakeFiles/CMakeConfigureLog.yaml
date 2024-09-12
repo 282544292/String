@@ -101,8 +101,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-sib1lc"
-      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-sib1lc"
+      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-sez8x3"
+      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-sez8x3"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: ""
@@ -112,16 +112,16 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-sib1lc'
+        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-sez8x3'
         
-        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_5501b
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_5501b.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_5501b.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_5501b.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v  -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_5501b.dir/CMakeCCompilerABI.c.obj -o cmTC_5501b.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_5501b.lib -Xlinker /pdb:cmTC_5501b.pdb -Xlinker /version:0.0     && cd ."
+        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_ff506
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_ff506.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_ff506.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_ff506.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v  -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_ff506.dir/CMakeCCompilerABI.c.obj -o cmTC_ff506.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_ff506.lib -Xlinker /pdb:cmTC_ff506.pdb -Xlinker /version:0.0     && cd ."
         clang version 18.1.8
         Target: x86_64-pc-windows-msvc
         Thread model: posix
         InstalledDir: C:\\PROGRA~1\\LLVM\\bin
-         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_5501b.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.40.33807\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.40.33807\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\um\\\\x64" "-libpath:C:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\18\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_5501b.dir/CMakeCCompilerABI.c.obj /MANIFEST:EMBED /implib:cmTC_5501b.lib /pdb:cmTC_5501b.pdb /version:0.0\x0d
+         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_ff506.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.40.33807\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.40.33807\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\um\\\\x64" "-libpath:C:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\18\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_ff506.dir/CMakeCCompilerABI.c.obj /MANIFEST:EMBED /implib:cmTC_ff506.lib /pdb:cmTC_ff506.pdb /version:0.0\x0d
         
       exitCode: 0
   -
@@ -182,8 +182,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-8e22m1"
-      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-8e22m1"
+      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-5gx26a"
+      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-5gx26a"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -194,16 +194,16 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-8e22m1'
+        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-5gx26a'
         
-        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_f6b0e
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_f6b0e.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_f6b0e.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_f6b0e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v  -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_f6b0e.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f6b0e.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_f6b0e.lib -Xlinker /pdb:cmTC_f6b0e.pdb -Xlinker /version:0.0     && cd ."
+        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_9d869
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_9d869.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_9d869.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_9d869.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v  -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_9d869.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_9d869.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_9d869.lib -Xlinker /pdb:cmTC_9d869.pdb -Xlinker /version:0.0     && cd ."
         clang version 18.1.8
         Target: x86_64-pc-windows-msvc
         Thread model: posix
         InstalledDir: C:\\PROGRA~1\\LLVM\\bin
-         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_f6b0e.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.40.33807\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.40.33807\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\um\\\\x64" "-libpath:C:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\18\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_f6b0e.dir/CMakeCXXCompilerABI.cpp.obj /MANIFEST:EMBED /implib:cmTC_f6b0e.lib /pdb:cmTC_f6b0e.pdb /version:0.0\x0d
+         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_9d869.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.40.33807\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.40.33807\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\um\\\\x64" "-libpath:C:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\18\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_9d869.dir/CMakeCXXCompilerABI.cpp.obj /MANIFEST:EMBED /implib:cmTC_9d869.lib /pdb:cmTC_9d869.pdb /version:0.0\x0d
         
       exitCode: 0
   -
@@ -267,8 +267,8 @@ events:
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-9wvbin"
-      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-9wvbin"
+      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-wmrfd6"
+      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-wmrfd6"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -278,11 +278,11 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-9wvbin'
+        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-wmrfd6'
         
-        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_ecca7
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_ecca7.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_ecca7.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_ecca7.dir/feature_tests.cxx.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-9wvbin/feature_tests.cxx
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_ecca7.dir/feature_tests.cxx.obj -o cmTC_ecca7.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_ecca7.lib -Xlinker /pdb:cmTC_ecca7.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_041ab
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_041ab.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_041ab.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_041ab.dir/feature_tests.cxx.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-wmrfd6/feature_tests.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_041ab.dir/feature_tests.cxx.obj -o cmTC_041ab.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_041ab.lib -Xlinker /pdb:cmTC_041ab.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
         
       exitCode: 0
   -
@@ -297,8 +297,8 @@ events:
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-s8p3nm"
-      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-s8p3nm"
+      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-cduc0p"
+      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-cduc0p"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -308,11 +308,145 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-s8p3nm'
+        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-cduc0p'
         
-        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_3d10d
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_3d10d.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_3d10d.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_3d10d.dir/feature_tests.cxx.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-s8p3nm/feature_tests.cxx
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_3d10d.dir/feature_tests.cxx.obj -o cmTC_3d10d.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_3d10d.lib -Xlinker /pdb:cmTC_3d10d.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_67415
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_67415.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_67415.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_67415.dir/feature_tests.cxx.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-cduc0p/feature_tests.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_67415.dir/feature_tests.cxx.obj -o cmTC_67415.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_67415.lib -Xlinker /pdb:cmTC_67415.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
         
       exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "_deps/googletest-src/googletest/cmake/internal_utils.cmake:65 (find_package)"
+      - "_deps/googletest-src/googletest/CMakeLists.txt:88 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-dx3a5k"
+      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-dx3a5k"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-dx3a5k'
+        
+        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_89877
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DCMAKE_HAVE_LIBC_PTHREAD  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_89877.dir/src.c.obj -MF CMakeFiles\\cmTC_89877.dir\\src.c.obj.d -o CMakeFiles/cmTC_89877.dir/src.c.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-dx3a5k/src.c
+        FAILED: CMakeFiles/cmTC_89877.dir/src.c.obj 
+        C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DCMAKE_HAVE_LIBC_PTHREAD  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_89877.dir/src.c.obj -MF CMakeFiles\\cmTC_89877.dir\\src.c.obj.d -o CMakeFiles/cmTC_89877.dir/src.c.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-dx3a5k/src.c
+        C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-dx3a5k/src.c:1:10: fatal error: 'pthread.h' file not found
+            1 | #include <pthread.h>\x0d
+              |          ^~~~~~~~~~~\x0d
+        1 error generated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "_deps/googletest-src/googletest/cmake/internal_utils.cmake:65 (find_package)"
+      - "_deps/googletest-src/googletest/CMakeLists.txt:88 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-nfg2kr"
+      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-nfg2kr"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-nfg2kr'
+        
+        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_f623d
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_f623d.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_f623d.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_f623d.dir/CheckFunctionExists.c.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-nfg2kr/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -DCHECK_FUNCTION_EXISTS=pthread_create -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_f623d.dir/CheckFunctionExists.c.obj -o cmTC_f623d.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_f623d.lib -Xlinker /pdb:cmTC_f623d.pdb -Xlinker /version:0.0   -lpthreads.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        FAILED: cmTC_f623d.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -DCHECK_FUNCTION_EXISTS=pthread_create -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_f623d.dir/CheckFunctionExists.c.obj -o cmTC_f623d.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_f623d.lib -Xlinker /pdb:cmTC_f623d.pdb -Xlinker /version:0.0   -lpthreads.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        lld-link: error: could not open 'pthreads.lib': no such file or directory\x0d
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "_deps/googletest-src/googletest/cmake/internal_utils.cmake:65 (find_package)"
+      - "_deps/googletest-src/googletest/CMakeLists.txt:88 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-a7tthw"
+      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-a7tthw"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-a7tthw'
+        
+        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_7513e
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_7513e.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_7513e.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_7513e.dir/CheckFunctionExists.c.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-a7tthw/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -DCHECK_FUNCTION_EXISTS=pthread_create -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_7513e.dir/CheckFunctionExists.c.obj -o cmTC_7513e.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_7513e.lib -Xlinker /pdb:cmTC_7513e.pdb -Xlinker /version:0.0   -lpthread.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        FAILED: cmTC_7513e.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -DCHECK_FUNCTION_EXISTS=pthread_create -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_7513e.dir/CheckFunctionExists.c.obj -o cmTC_7513e.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_7513e.lib -Xlinker /pdb:cmTC_7513e.pdb -Xlinker /version:0.0   -lpthread.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        lld-link: error: could not open 'pthread.lib': no such file or directory\x0d
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:136 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:179 (_threads_check_flag_pthread)"
+      - "_deps/googletest-src/googletest/cmake/internal_utils.cmake:65 (find_package)"
+      - "_deps/googletest-src/googletest/CMakeLists.txt:88 (config_compiler_and_linker)"
+    checks:
+      - "Check if compiler accepts -pthread"
+    directories:
+      source: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-og1esk"
+      binary: "C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-og1esk"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "THREADS_HAVE_PTHREAD_ARG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-og1esk'
+        
+        Run Build Command(s): C:/PROGRA~1/ninja/ninja.exe -v cmTC_70d15
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_70d15.dir/CheckForPthreads.c.obj -MF CMakeFiles\\cmTC_70d15.dir\\CheckForPthreads.c.obj.d -o CMakeFiles/cmTC_70d15.dir/CheckForPthreads.c.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-og1esk/CheckForPthreads.c
+        FAILED: CMakeFiles/cmTC_70d15.dir/CheckForPthreads.c.obj 
+        C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_70d15.dir/CheckForPthreads.c.obj -MF CMakeFiles\\cmTC_70d15.dir\\CheckForPthreads.c.obj.d -o CMakeFiles/cmTC_70d15.dir/CheckForPthreads.c.obj -c C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-og1esk/CheckForPthreads.c
+        C:/MString/build/CMakeFiles/CMakeScratch/TryCompile-og1esk/CheckForPthreads.c:1:10: fatal error: 'pthread.h' file not found\x0d
+            1 | #include <pthread.h>\x0d
+              |          ^~~~~~~~~~~\x0d
+        1 error generated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
 ...

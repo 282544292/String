@@ -1,92 +1,116 @@
 [
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_compare.cpp.obj -c C:\\MString\\test\\test_compare.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_compare.cpp.obj -c C:\\MString\\test\\test_compare.cpp",
   "file": "C:\\MString\\test\\test_compare.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_compare.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_concat.cpp.obj -c C:\\MString\\test\\test_concat.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_concat.cpp.obj -c C:\\MString\\test\\test_concat.cpp",
   "file": "C:\\MString\\test\\test_concat.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_concat.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_contains.cpp.obj -c C:\\MString\\test\\test_contains.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_contains.cpp.obj -c C:\\MString\\test\\test_contains.cpp",
   "file": "C:\\MString\\test\\test_contains.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_contains.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_endswith.cpp.obj -c C:\\MString\\test\\test_endswith.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_endswith.cpp.obj -c C:\\MString\\test\\test_endswith.cpp",
   "file": "C:\\MString\\test\\test_endswith.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_endswith.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_equals.cpp.obj -c C:\\MString\\test\\test_equals.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_equals.cpp.obj -c C:\\MString\\test\\test_equals.cpp",
   "file": "C:\\MString\\test\\test_equals.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_equals.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_indexof.cpp.obj -c C:\\MString\\test\\test_indexof.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_indexof.cpp.obj -c C:\\MString\\test\\test_indexof.cpp",
   "file": "C:\\MString\\test\\test_indexof.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_indexof.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_replace.cpp.obj -c C:\\MString\\test\\test_replace.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_replace.cpp.obj -c C:\\MString\\test\\test_replace.cpp",
   "file": "C:\\MString\\test\\test_replace.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_replace.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_reverse.cpp.obj -c C:\\MString\\test\\test_reverse.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_reverse.cpp.obj -c C:\\MString\\test\\test_reverse.cpp",
   "file": "C:\\MString\\test\\test_reverse.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_reverse.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_startswith.cpp.obj -c C:\\MString\\test\\test_startswith.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_startswith.cpp.obj -c C:\\MString\\test\\test_startswith.cpp",
   "file": "C:\\MString\\test\\test_startswith.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_startswith.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_substring.cpp.obj -c C:\\MString\\test\\test_substring.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_substring.cpp.obj -c C:\\MString\\test\\test_substring.cpp",
   "file": "C:\\MString\\test\\test_substring.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_substring.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_tolower.cpp.obj -c C:\\MString\\test\\test_tolower.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_tolower.cpp.obj -c C:\\MString\\test\\test_tolower.cpp",
   "file": "C:\\MString\\test\\test_tolower.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_tolower.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_toupper.cpp.obj -c C:\\MString\\test\\test_toupper.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_toupper.cpp.obj -c C:\\MString\\test\\test_toupper.cpp",
   "file": "C:\\MString\\test\\test_toupper.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_toupper.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_trim.cpp.obj -c C:\\MString\\test\\test_trim.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_trim.cpp.obj -c C:\\MString\\test\\test_trim.cpp",
   "file": "C:\\MString\\test\\test_trim.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_trim.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\src\\errors.cpp.obj -c C:\\MString\\src\\errors.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\src\\errors.cpp.obj -c C:\\MString\\src\\errors.cpp",
   "file": "C:\\MString\\src\\errors.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\src\\errors.cpp.obj"
 },
 {
   "directory": "C:/MString/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\src\\string.cpp.obj -c C:\\MString\\src\\string.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\src\\string.cpp.obj -c C:\\MString\\src\\string.cpp",
   "file": "C:\\MString\\src\\string.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\src\\string.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/_deps/googletest-src/googlemock/include -IC:/MString/build/_deps/googletest-src/googlemock -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=0 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o _deps\\googletest-build\\googlemock\\CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c C:\\MString\\build\\_deps\\googletest-src\\googlemock\\src\\gmock-all.cc",
+  "file": "C:\\MString\\build\\_deps\\googletest-src\\googlemock\\src\\gmock-all.cc",
+  "output": "_deps\\googletest-build\\googlemock\\CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -isystem C:/MString/build/_deps/googletest-src/googlemock/include -isystem C:/MString/build/_deps/googletest-src/googlemock -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=0 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o _deps\\googletest-build\\googlemock\\CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c C:\\MString\\build\\_deps\\googletest-src\\googlemock\\src\\gmock_main.cc",
+  "file": "C:\\MString\\build\\_deps\\googletest-src\\googlemock\\src\\gmock_main.cc",
+  "output": "_deps\\googletest-build\\googlemock\\CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/_deps/googletest-src/googletest/include -IC:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=0 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o _deps\\googletest-build\\googletest\\CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c C:\\MString\\build\\_deps\\googletest-src\\googletest\\src\\gtest-all.cc",
+  "file": "C:\\MString\\build\\_deps\\googletest-src\\googletest\\src\\gtest-all.cc",
+  "output": "_deps\\googletest-build\\googletest\\CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj"
+},
+{
+  "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=0 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o _deps\\googletest-build\\googletest\\CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c C:\\MString\\build\\_deps\\googletest-src\\googletest\\src\\gtest_main.cc",
+  "file": "C:\\MString\\build\\_deps\\googletest-src\\googletest\\src\\gtest_main.cc",
+  "output": "_deps\\googletest-build\\googletest\\CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj"
 }
 ]

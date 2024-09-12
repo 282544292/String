@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-UTEST(string, equals)
+TEST(string, equals)
 {
     String str = String("HELLO WORLD");
     String str2 = String("HELLO WORLD");

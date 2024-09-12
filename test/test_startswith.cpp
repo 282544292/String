@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-UTEST(string, startswith)
+TEST(string, startswith)
 {
     String str = String("HELLO WORLD");
     String start_str = String(u"HELLO");

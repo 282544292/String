@@ -1,0 +1,4 @@
+CompileFlags: # Tweak the parse settings, example directory given to show format
+  Add:
+  - "--std=c++17"
+  - "-IC:/MString/"

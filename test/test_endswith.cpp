@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-UTEST(string, endswith)
+TEST(string, endswith)
 {
     String str = String("HELLO WORLD");
     String end_str = String(u"WORLD");

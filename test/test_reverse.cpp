@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-UTEST(string, reverse)
+TEST(string, reverse)
 {
     char16_t str1[] = u"HELLO WORLD";
     String ret = StringMethods::reverse(String(str1));

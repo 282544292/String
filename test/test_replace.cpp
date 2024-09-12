@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-UTEST(string, replace)
+TEST(string, replace)
 {
     char16_t str1[] = u"HELLO WORLD";
     String str = String(str1);

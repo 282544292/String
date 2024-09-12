@@ -1,6 +1,6 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
-UTEST(string, substring)
+#include<gtest/gtest.h>
+TEST(string, substring)
 {
     char16_t str1[] = u"HELLO WORLD";
     String ret = StringMethods::substring(String(str1), 0, 5);

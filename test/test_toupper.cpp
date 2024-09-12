@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
-#include "../include/utest.h"
+#include<gtest/gtest.h>
 
-UTEST(string, toupper)
+TEST(string, toupper)
 {
     char16_t str1[] = u"hello world!";
     String ret = StringMethods::toupper(String(str1));

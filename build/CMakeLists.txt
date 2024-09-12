@@ -4,6 +4,14 @@ cmake_minimum_required(VERSION 3.10)
 # 项目名称
 project(MString)
 
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  GIT_REPOSITORY https://github.com/google/googletest.git
+  GIT_TAG release-1.12.1
+)
+FetchContent_MakeAvailable(googletest)
+
 # 包含头文件目录
 include_directories(${PROJECT_BINARY_DIR}/../include)
 
@@ -29,7 +37,12 @@ add_executable(main ${TEST_SRC} ${SRC_LIST})
 # set_target_properties(func_shared PROPERTIES OUTPUT_NAME "CSharpStrLib")
 
 # 链接外部库（如果有）
-target_link_libraries(main ${FUNC_LIB})
+target_link_libraries(main ${FUNC_LIB} GTest::gtest_main)
 
 # 在CMake 中增加编译选项
 add_compile_options(-std=c++17)
+
+enable_testing()
+
+include(GoogleTest)
+gtest_add_tests(TARGET main)
