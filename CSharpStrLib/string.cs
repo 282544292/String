@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using System.Text;
 
 namespace CSharpStrLib;
 
@@ -28,25 +29,6 @@ public class String
                 str[i] = (ushort)char.ToUpperInvariant((char)str[i]);
             }
         }
-    }
-
-    [UnmanagedCallersOnly(EntryPoint = "ReplaceOutLen")]
-    public static unsafe void ReplaceOutLen(int* outLen, ushort* str, int len, ushort* oldChar, int oldLen, int newLen)
-    {
-        var strSpan = new Span<ushort>(str, len);
-        var oldCharSpan = new Span<ushort>(oldChar, oldLen);
-
-        int occurrences = 0;
-        int srcIndex = 0;
-        int index = strSpan.IndexOf(oldCharSpan);
-        while (index != -1)
-        {
-            occurrences++;
-            srcIndex = index + oldCharSpan.Length;
-            index = strSpan.Slice(srcIndex).IndexOf(oldCharSpan);
-        }
-
-        *outLen = strSpan.Length + occurrences * (newLen - oldLen);
     }
 
     [UnmanagedCallersOnly(EntryPoint = "Replace")]
@@ -361,11 +343,11 @@ public class String
     }
 
     [UnmanagedCallersOnly(EntryPoint = "Concat")]
-    public static unsafe void Concat(ushort* ret, ushort* strA, int lenA, ushort* strB, int lenB)
+    public static unsafe void Concat(byte* ret, byte* strA, int lenA, byte* strB, int lenB)
     {
-        var strASpan = new Span<ushort>(strA, lenA);
-        var strBSpan = new Span<ushort>(strB, lenB);
-        var strCpy = new Span<ushort>(ret, lenA + lenB);
+        var strASpan = new Span<byte>(strA, lenA);
+        var strBSpan = new Span<byte>(strB, lenB);
+        var strCpy = new Span<byte>(ret, lenA + lenB);
         strASpan.CopyTo(strCpy);
         strBSpan.CopyTo(strCpy.Slice(lenA));
     }
@@ -383,5 +365,34 @@ public class String
         {
             *ret = 0;
         }
+    }
+
+    [UnmanagedCallersOnly(EntryPoint = "TryEncodingConvert")]
+    public static unsafe sbyte TryEncodingConvert(byte *ret, long *retLen, byte *str, int len, int encoding1, int encoding2)
+    {
+        Encoding enc1;
+        Encoding enc2;
+        try
+        {
+            enc1 = Encoding.GetEncoding(encoding1);
+            enc2 = Encoding.GetEncoding(encoding2);
+        }
+        catch (Exception)
+        {
+            return -1;
+        }
+        string srcString = enc1.GetString(new ReadOnlySpan<byte>(str, len));
+        byte[] destBytes = enc2.GetBytes(srcString);
+        *retLen = destBytes.Length;
+        if (destBytes.Length > *retLen)
+        {
+            return 0;
+        }
+
+        fixed (byte* destPtr = destBytes)
+        {
+            Buffer.MemoryCopy(destPtr, ret, *retLen, destBytes.Length);
+        }
+        return 1;
     }
 }

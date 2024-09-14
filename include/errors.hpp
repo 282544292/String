@@ -6,6 +6,8 @@
 enum class StringErrorCode {
   INDEX_OUT_OF_BOUNDS,
   OUT_OF_BOUNDS,
+  CONVERT_FAILED,
+  UNSUPPORTED_ENCODING,
 };
 
 class StringException : public std::exception {
@@ -19,6 +21,8 @@ private:
 };
 
 namespace stringErrors {
-    StringException index_out_of_bounds(int64_t index, int64_t lb, int64_t ub);
-    StringException out_of_bounds(int64_t val, int64_t lb, int64_t ub);
+  StringException index_out_of_bounds(int64_t index, int64_t lb, int64_t ub);
+  StringException out_of_bounds(int64_t val, int64_t lb, int64_t ub);
+  StringException convert_failed();
+  StringException unsupported_encoding();
 } // namespace stringErrors

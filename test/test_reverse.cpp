@@ -4,7 +4,7 @@
 TEST(string, reverse)
 {
     char16_t str1[] = u"HELLO WORLD";
-    String ret = StringMethods::reverse(String(str1));
+    String ret = StringAPI::reverse(String(str1));
     print(ret);
-    EXPECT_TRUE(ret == String("DLROW OLLEH"));
+    EXPECT_TRUE(ret == String(u"DLROW OLLEH"));
 }

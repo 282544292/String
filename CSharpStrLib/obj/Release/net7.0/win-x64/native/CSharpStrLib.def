@@ -1,5 +1,4 @@
 EXPORTS
-   ReplaceOutLen
    Replace
    Contains
    IndexOf
@@ -20,3 +19,4 @@ EXPORTS
    Substring
    Concat
    Equals
+   TryEncodingConvert

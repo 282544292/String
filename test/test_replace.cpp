@@ -7,7 +7,7 @@ TEST(string, replace)
     String str = String(str1);
     String old_str = String(u"WORLD");
     String new_str = String(u"WORLD!");
-    String ret = StringMethods::replace(String(str1), old_str, new_str);
+    String ret = StringAPI::replace(String(str1), old_str, new_str);
     print(ret);
-    EXPECT_TRUE(ret == String("HELLO WORLD!"));
+    EXPECT_TRUE(ret == String(u"HELLO WORLD!"));
 }

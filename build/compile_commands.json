@@ -19,6 +19,12 @@
 },
 {
   "directory": "C:/MString/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_encoding.cpp.obj -c C:\\MString\\test\\test_encoding.cpp",
+  "file": "C:\\MString\\test\\test_encoding.cpp",
+  "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_encoding.cpp.obj"
+},
+{
+  "directory": "C:/MString/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/MString/build/../include -isystem C:/MString/build/_deps/googletest-src/googletest/include -isystem C:/MString/build/_deps/googletest-src/googletest -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\main.dir\\C_\\MString\\test\\test_endswith.cpp.obj -c C:\\MString\\test\\test_endswith.cpp",
   "file": "C:\\MString\\test\\test_endswith.cpp",
   "output": "CMakeFiles\\main.dir\\C_\\MString\\test\\test_endswith.cpp.obj"

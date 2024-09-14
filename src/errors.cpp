@@ -13,3 +13,13 @@ StringException stringErrors::out_of_bounds(int64_t val, int64_t lb, int64_t ub)
     std::string msg = "out of bounds: " + std::to_string(val) + " not in [" + std::to_string(lb) + ", " + std::to_string(ub) + "]";
     return StringException(StringErrorCode::INDEX_OUT_OF_BOUNDS, msg.c_str());
 }
+
+StringException stringErrors::convert_failed()
+{
+    return StringException(StringErrorCode::CONVERT_FAILED, "Convert failed! Unsupported encoding.");
+}
+
+StringException stringErrors::unsupported_encoding()
+{
+    return StringException(StringErrorCode::UNSUPPORTED_ENCODING, "Unsupported encoding.");
+}
