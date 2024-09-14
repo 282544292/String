@@ -35,7 +35,7 @@ public:
     ~String(); // 析构函数
     static String create_utf16_str_from_bytes(void *str, int64_t bytes, Encoding encoding); // 从字节数组构造 utf16 字符串
     static String create_shared_from_string(const String &str); // 从字符串构造共享内存的字符串
-    String slice(int64_t start_index, int64_t length);
+    // String slice(int64_t start_index, int64_t length);
 
     // set_value 的 index 如果超过数组大小, 那么会自动创建更大的数组，并将原数组复制到新数组中再进行操作
     // set_value 和 get_value 目前只支持 UTF16_LE 编码
@@ -44,7 +44,8 @@ public:
     template<typename T>
     T *get_ptr() const
     {
-        return reinterpret_cast<T *>(_data) + _offset;
+        return reinterpret_cast<T *>(_data);
+        // return reinterpret_cast<T *>(_data) + _offset;
     }
 
     // 重载运算符
@@ -56,7 +57,7 @@ public:
 
     int64_t strlen() const;
     uint8_t get_size() const;
-    uint8_t get_reused() const;
+    // uint8_t get_reused() const;
     Encoding get_encoding() const;
 
 private:
@@ -66,9 +67,9 @@ private:
     int64_t _length;
     Encoding _encoding;
     uint8_t _size;
-    bool _is_fixed_length = true; // 是否是定长编码, [TODO] 目前只支持定长编码
-    uint8_t _reused = 0; // 是否是共享内存
-    int64_t _offset = 0; // 偏移量
+    // bool _is_fixed_length = true; // 是否是定长编码, [TODO] 目前只支持定长编码
+    // uint8_t _reused = 0; // 是否是共享内存
+    // int64_t _offset = 0; // 偏移量
 };
 
 uint8_t size(Encoding encoding);

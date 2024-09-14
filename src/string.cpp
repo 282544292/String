@@ -106,7 +106,7 @@ String String::create_utf16_str_from_bytes(void *str, int64_t bytes, Encoding en
         from._size = size(encoding);
         from._length = bytes / from._size;
         from._data = str; // 这里实际上是一个引用，因为不是最后结果，所以我并不想为 from 分配内存
-        from._reused = 1;
+        // from._reused = 1;
         auto ret = StringAPI::convert_to_unicode(from);
         return ret;
     }
@@ -137,10 +137,10 @@ uint8_t String::get_size() const
     return _size;
 }
 
-uint8_t String::get_reused() const
-{
-    return _reused;
-}
+// uint8_t String::get_reused() const
+// {
+//     return _reused;
+// }
 
 Encoding String::get_encoding() const
 {
@@ -236,31 +236,31 @@ void print(const String &str)
     // 设置 wcout 使用宽字符区域设置
     std::wcout.imbue(std::locale(""));
 #endif
-    if (str.get_reused() == 0)
-        std::wcout << reinterpret_cast<wchar_t *>(str.get_ptr<char16_t>()) << std::endl;
-    else
-    {
-        for (int64_t i = 0; i < str.strlen(); i++)
-        {
-            std::wcout << str.get_value(i);
-        }
-    }
+    // if (str.get_reused() == 0)
+    std::wcout << reinterpret_cast<wchar_t *>(str.get_ptr<char16_t>()) << std::endl;
+    // else
+    // {
+    //     for (int64_t i = 0; i < str.strlen(); i++)
+    //     {
+    //         std::wcout << str.get_value(i);
+    //     }
+    // }
 }
 
-String String::slice(int64_t start, int64_t length)
-{
-#ifdef DEBUG
-    if (start < 0 || start >= _length)
-    {
-        throw stringErrors::out_of_bounds(start, 0, str.strlen());
-    }
-#endif
-    _reused = 1;
-    auto ret = String::create_shared_from_string(*this);
-    ret._offset = start * _size;
-    ret._length = length;
-    return ret;
-}
+// String String::slice(int64_t start, int64_t length)
+// {
+// #ifdef DEBUG
+//     if (start < 0 || start >= _length)
+//     {
+//         throw stringErrors::out_of_bounds(start, 0, str.strlen());
+//     }
+// #endif
+//     _reused = 1;
+//     auto ret = String::create_shared_from_string(*this);
+//     ret._offset = start * _size;
+//     ret._length = length;
+//     return ret;
+// }
 
 std::vector<int64_t> StringAPI::match(const String &str, const String &pat_str, bool ignoreCase)
 {
