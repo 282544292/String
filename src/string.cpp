@@ -302,41 +302,41 @@ String StringAPI::concat(const String &str1, const String &str2)
     }
 }
 
-String StringAPI::replace(const String &str, const String &old_tr, const String &new_str)
+String StringAPI::replace(const String &str, const String &old_str, const String &new_str)
 {
-    int32_t match_numbers = match(str, old_tr).size();
-    int32_t out_len = str.strlen() + (new_str.strlen() - old_tr.strlen()) * match_numbers;
+    int32_t match_numbers = match(str, old_str).size();
+    int32_t out_len = str.strlen() + (new_str.strlen() - old_str.strlen()) * match_numbers;
     auto ret = String(out_len);
-    MReplace(ret.get_ptr<char16_t>(), out_len, str.get_ptr<char16_t>(), str.strlen(), old_tr.get_ptr<char16_t>(), old_tr.strlen(), new_str.get_ptr<char16_t>(), new_str.strlen());
+    MReplace(ret.get_ptr<char16_t>(), out_len, str.get_ptr<char16_t>(), str.strlen(), old_str.get_ptr<char16_t>(), old_str.strlen(), new_str.get_ptr<char16_t>(), new_str.strlen());
     return ret;
 }
 
-bool StringAPI::contains(const String &str, const String &subStr, bool ignoreCase)
+bool StringAPI::contains(const String &str, const String &sub_str, bool ignoreCase)
 {
     uint8_t ret = 0;
-    MContains(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), ignoreCase);
+    MContains(&ret, str.get_ptr<char16_t>(), str.strlen(), sub_str.get_ptr<char16_t>(), sub_str.strlen(), ignoreCase);
     return ret != 0;
 }
 
-int64_t StringAPI::indexof(const String &str, const String &subStr, bool ignoreCase)
+int64_t StringAPI::indexof(const String &str, const String &sub_str, bool ignoreCase)
 {
     int32_t ret = -1;
-    MIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), ignoreCase);
+    MIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), sub_str.get_ptr<char16_t>(), sub_str.strlen(), ignoreCase);
     return ret;
 }
 
-int64_t StringAPI::indexof(const String &str, const String &subStr, int64_t start, bool ignoreCase)
+int64_t StringAPI::indexof(const String &str, const String &sub_str, int64_t start, bool ignoreCase)
 {
     if (start < 0 || start >= str.strlen())
     {
         throw stringErrors::out_of_bounds(start, 0, str.strlen() - 1);
     }
     int32_t ret = -1;
-    MStartIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), start, ignoreCase);
+    MStartIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), sub_str.get_ptr<char16_t>(), sub_str.strlen(), start, ignoreCase);
     return ret;
 }
 
-int64_t StringAPI::indexof(const String &str, const String &subStr, int64_t start, int64_t count, bool ignoreCase)
+int64_t StringAPI::indexof(const String &str, const String &sub_str, int64_t start, int64_t count, bool ignoreCase)
 {
     if (count < 0)
     {
@@ -351,7 +351,7 @@ int64_t StringAPI::indexof(const String &str, const String &subStr, int64_t star
         throw stringErrors::out_of_bounds(start + count, 0, str.strlen() - 1);
     }
     int32_t ret = -1;
-    MStartCountIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), start, count, ignoreCase);
+    MStartCountIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), sub_str.get_ptr<char16_t>(), sub_str.strlen(), start, count, ignoreCase);
     return ret;
 }
 
