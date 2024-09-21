@@ -2,8 +2,6 @@
 #include "../include/allocator.hpp"
 #include <cstdint>
 #include<gtest/gtest.h>
-#include <iostream>
-#include <locale>
 
 TEST(string, encoding)
 {
