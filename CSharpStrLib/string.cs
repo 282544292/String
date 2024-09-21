@@ -12,10 +12,7 @@ public class String
 
         for (int i = 0; i < str.Length; i++)
         {
-            if (str[i] <= char.MaxValue)
-            {
-                str[i] = (ushort)char.ToLowerInvariant((char)str[i]);
-            }
+            str[i] = (ushort)char.ToLowerInvariant((char)str[i]);
         }
         return;
     }
@@ -24,15 +21,12 @@ public class String
     {
         for (int i = 0; i < str.Length; i++)
         {
-            if (str[i] <= char.MaxValue)
-            {
-                str[i] = (ushort)char.ToUpperInvariant((char)str[i]);
-            }
+            str[i] = (ushort)char.ToUpperInvariant((char)str[i]);
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "Replace")]
-    public static unsafe void Replace(ushort* ret, int outLen, ushort* str, int len, ushort* oldChar, int oldLen, ushort* newChar, int newLen)
+    [UnmanagedCallersOnly(EntryPoint = "MReplace")]
+    public static unsafe void MReplace(ushort* ret, int outLen, ushort* str, int len, ushort* oldChar, int oldLen, ushort* newChar, int newLen)
     {
         var strSpan = new Span<ushort>(str, len);
         var oldCharSpan = new Span<ushort>(oldChar, oldLen);
@@ -53,8 +47,8 @@ public class String
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "Contains")]
-    public static unsafe void Contains(byte* ret, ushort* str, int len, ushort* value, int valueLen, byte ignoreCase)
+    [UnmanagedCallersOnly(EntryPoint = "MContains")]
+    public static unsafe void MContains(byte* ret, ushort* str, int len, ushort* value, int valueLen, byte ignoreCase)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -85,8 +79,8 @@ public class String
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "IndexOf")]
-    public static unsafe void IndexOf(int* ret, ushort* str, int len, ushort* value, int valueLen, byte ignoreCase)
+    [UnmanagedCallersOnly(EntryPoint = "MIndexOf")]
+    public static unsafe void MIndexOf(int* ret, ushort* str, int len, ushort* value, int valueLen, byte ignoreCase)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -108,8 +102,8 @@ public class String
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "StartCountIndexOf")]
-    public static unsafe void StartCountIndexOf(int* ret, ushort* str, int len, ushort* value, int valueLen, int start, int count, byte ignoreCase)
+    [UnmanagedCallersOnly(EntryPoint = "MStartCountIndexOf")]
+    public static unsafe void MStartCountIndexOf(int* ret, ushort* str, int len, ushort* value, int valueLen, int start, int count, byte ignoreCase)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -140,8 +134,8 @@ public class String
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "StartIndexOf")]
-    public static unsafe void StartIndexOf(int* ret, ushort* str, int len, ushort* value, int valueLen, int start, byte ignoreCase)
+    [UnmanagedCallersOnly(EntryPoint = "MStartIndexOf")]
+    public static unsafe void MStartIndexOf(int* ret, ushort* str, int len, ushort* value, int valueLen, int start, byte ignoreCase)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -172,8 +166,8 @@ public class String
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "StartsWith")]
-    public static unsafe void StartsWith(byte* ret, ushort* str, int len, ushort* value, int valueLen, byte ignoreCase)
+    [UnmanagedCallersOnly(EntryPoint = "MStartsWith")]
+    public static unsafe void MStartsWith(byte* ret, ushort* str, int len, ushort* value, int valueLen, byte ignoreCase)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -204,8 +198,8 @@ public class String
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "EndsWith")]
-    public static unsafe void EndsWith(byte* ret, ushort* str, int len, ushort* value, int valueLen, byte ignoreCase)
+    [UnmanagedCallersOnly(EntryPoint = "MEndsWith")]
+    public static unsafe void MEndsWith(byte* ret, ushort* str, int len, ushort* value, int valueLen, byte ignoreCase)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -236,16 +230,16 @@ public class String
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "Compare")]
-    public static unsafe void Compare(int* ret, ushort* strA, int lenA, ushort* strB, int lenB)
+    [UnmanagedCallersOnly(EntryPoint = "MCompare")]
+    public static unsafe void MCompare(int* ret, ushort* strA, int lenA, ushort* strB, int lenB)
     {
         var strASpan = new Span<ushort>(strA, lenA);
         var strBSpan = new Span<ushort>(strB, lenB);
         *ret = strASpan.SequenceCompareTo(strBSpan);
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "Reverse")]
-    public static unsafe void Reverse(ushort* ret, ushort* str, int len)
+    [UnmanagedCallersOnly(EntryPoint = "MReverse")]
+    public static unsafe void MReverse(ushort* ret, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
         var result = new Span<ushort>(ret, len);
@@ -253,8 +247,8 @@ public class String
         result.Reverse();
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "Trim")]
-    public static unsafe void Trim(ushort* ret, int* outLen, ushort* str, int len)
+    [UnmanagedCallersOnly(EntryPoint = "MTrim")]
+    public static unsafe void MTrim(ushort* ret, int* outLen, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
         var strRet = new Span<ushort>(ret, len);
@@ -263,8 +257,8 @@ public class String
         *outLen = retSpan.Length;
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "TrimStr")]
-    public static unsafe void TrimStr(ushort* ret, int* outLen, ushort* str, int len, ushort* value, int valueLen)
+    [UnmanagedCallersOnly(EntryPoint = "MTrimStr")]
+    public static unsafe void MTrimStr(ushort* ret, int* outLen, ushort* str, int len, ushort* value, int valueLen)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -274,8 +268,8 @@ public class String
         *outLen = retSpan.Length;
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "TrimStart")]
-    public static unsafe void TrimStart(ushort* ret, int* outLen, ushort* str, int len)
+    [UnmanagedCallersOnly(EntryPoint = "MTrimStart")]
+    public static unsafe void MTrimStart(ushort* ret, int* outLen, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
         var strRet = new Span<ushort>(ret, len);
@@ -284,8 +278,8 @@ public class String
         *outLen = retSpan.Length;
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "TrimStartStr")]
-    public static unsafe void TrimStartStr(ushort* ret, int* outLen, ushort* str, int len, ushort* value, int valueLen)
+    [UnmanagedCallersOnly(EntryPoint = "MTrimStartStr")]
+    public static unsafe void MTrimStartStr(ushort* ret, int* outLen, ushort* str, int len, ushort* value, int valueLen)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -295,8 +289,8 @@ public class String
         *outLen = retSpan.Length;
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "TrimEnd")]
-    public static unsafe void TrimEnd(ushort* ret, int* outLen, ushort* str, int len)
+    [UnmanagedCallersOnly(EntryPoint = "MTrimEnd")]
+    public static unsafe void MTrimEnd(ushort* ret, int* outLen, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
         var strRet = new Span<ushort>(ret, len);
@@ -305,8 +299,8 @@ public class String
         *outLen = retSpan.Length;
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "TrimEndStr")]
-    public static unsafe void TrimEndStr(ushort* ret, int* outLen, ushort* str, int len, ushort* value, int valueLen)
+    [UnmanagedCallersOnly(EntryPoint = "MTrimEndStr")]
+    public static unsafe void MTrimEndStr(ushort* ret, int* outLen, ushort* str, int len, ushort* value, int valueLen)
     {
         var strSpan = new Span<ushort>(str, len);
         var valueSpan = new Span<ushort>(value, valueLen);
@@ -316,8 +310,8 @@ public class String
         *outLen = retSpan.Length;
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "ToLower")]
-    public static unsafe void ToLower(ushort* ret, ushort* str, int len)
+    [UnmanagedCallersOnly(EntryPoint = "MToLower")]
+    public static unsafe void MToLower(ushort* ret, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
         var strCpy = new Span<ushort>(ret, len);
@@ -325,8 +319,8 @@ public class String
         ToLower(strCpy);
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "ToUpper")]
-    public static unsafe void ToUpper(ushort* ret, ushort* str, int len)
+    [UnmanagedCallersOnly(EntryPoint = "MToUpper")]
+    public static unsafe void MToUpper(ushort* ret, ushort* str, int len)
     {
         var strSpan = new Span<ushort>(str, len);
         var strCpy = new Span<ushort>(ret, len);
@@ -334,16 +328,16 @@ public class String
         ToUpper(strCpy);
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "Substring")]
-    public static unsafe void Substring(ushort* ret, ushort* str, int len, int start, int count)
+    [UnmanagedCallersOnly(EntryPoint = "MSubstring")]
+    public static unsafe void MSubstring(ushort* ret, ushort* str, int len, int start, int count)
     {
         var strSpan = new Span<ushort>(str, len);
         var strCpy = new Span<ushort>(ret, count);
         strSpan.Slice(start, count).CopyTo(strCpy);
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "Concat")]
-    public static unsafe void Concat(byte* ret, byte* strA, int lenA, byte* strB, int lenB)
+    [UnmanagedCallersOnly(EntryPoint = "MConcat")]
+    public static unsafe void MConcat(byte* ret, byte* strA, int lenA, byte* strB, int lenB)
     {
         var strASpan = new Span<byte>(strA, lenA);
         var strBSpan = new Span<byte>(strB, lenB);
@@ -352,8 +346,8 @@ public class String
         strBSpan.CopyTo(strCpy.Slice(lenA));
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "Equals")]
-    public static unsafe void Equals(byte *ret, ushort* strA, int lenA, ushort* strB, int lenB)
+    [UnmanagedCallersOnly(EntryPoint = "MEquals")]
+    public static unsafe void MEquals(byte *ret, ushort* strA, int lenA, ushort* strB, int lenB)
     {
         var strASpan = new Span<ushort>(strA, lenA);
         var strBSpan = new Span<ushort>(strB, lenB);
@@ -367,8 +361,8 @@ public class String
         }
     }
 
-    [UnmanagedCallersOnly(EntryPoint = "TryEncodingConvert")]
-    public static unsafe sbyte TryEncodingConvert(byte *ret, long *retLen, byte *str, int len, int encoding1, int encoding2)
+    [UnmanagedCallersOnly(EntryPoint = "MTryEncodingConvert")]
+    public static unsafe sbyte MTryEncodingConvert(byte *ret, long *retLen, byte *str, int len, int encoding1, int encoding2)
     {
         Encoding enc1;
         Encoding enc2;

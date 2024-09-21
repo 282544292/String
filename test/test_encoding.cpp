@@ -1,7 +1,7 @@
 #include "../include/string.hpp"
 #include "../include/allocator.hpp"
 #include <cstdint>
-#include<gtest/gtest.h>
+#include <gtest/gtest.h>
 
 TEST(string, encoding)
 {

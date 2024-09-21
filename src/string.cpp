@@ -289,7 +289,7 @@ String StringAPI::concat(const String &str1, const String &str2)
     if (str1.get_encoding() == str2.get_encoding())
     {
         auto str = String(str1.strlen() + str2.strlen(), str1.get_encoding());
-        Concat(str.get_ptr<uint8_t>(), str1.get_ptr<uint8_t>(), str1.strlen() * str.get_size(), str2.get_ptr<uint8_t>(), str2.strlen() * str2.get_size());
+        MConcat(str.get_ptr<uint8_t>(), str1.get_ptr<uint8_t>(), str1.strlen() * str.get_size(), str2.get_ptr<uint8_t>(), str2.strlen() * str2.get_size());
         return str;
     }
     else
@@ -297,7 +297,7 @@ String StringAPI::concat(const String &str1, const String &str2)
         auto str1_unicode = convert_to_unicode(str1);
         auto str2_unicode = convert_to_unicode(str2);
         auto str = String(str1_unicode.strlen() + str2_unicode.strlen(), Encoding::UTF16_LE);
-        Concat(str.get_ptr<uint8_t>(), str1_unicode.get_ptr<uint8_t>(), str1_unicode.strlen() * str.get_size(), str2_unicode.get_ptr<uint8_t>(), str2_unicode.strlen() * str2_unicode.get_size());
+        MConcat(str.get_ptr<uint8_t>(), str1_unicode.get_ptr<uint8_t>(), str1_unicode.strlen() * str.get_size(), str2_unicode.get_ptr<uint8_t>(), str2_unicode.strlen() * str2_unicode.get_size());
         return str;
     }
 }
@@ -307,21 +307,21 @@ String StringAPI::replace(const String &str, const String &old_tr, const String 
     int32_t match_numbers = match(str, old_tr).size();
     int32_t out_len = str.strlen() + (new_str.strlen() - old_tr.strlen()) * match_numbers;
     auto ret = String(out_len);
-    Replace(ret.get_ptr<char16_t>(), out_len, str.get_ptr<char16_t>(), str.strlen(), old_tr.get_ptr<char16_t>(), old_tr.strlen(), new_str.get_ptr<char16_t>(), new_str.strlen());
+    MReplace(ret.get_ptr<char16_t>(), out_len, str.get_ptr<char16_t>(), str.strlen(), old_tr.get_ptr<char16_t>(), old_tr.strlen(), new_str.get_ptr<char16_t>(), new_str.strlen());
     return ret;
 }
 
 bool StringAPI::contains(const String &str, const String &subStr, bool ignoreCase)
 {
     uint8_t ret = 0;
-    Contains(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), ignoreCase);
+    MContains(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), ignoreCase);
     return ret != 0;
 }
 
 int64_t StringAPI::indexof(const String &str, const String &subStr, bool ignoreCase)
 {
     int32_t ret = -1;
-    IndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), ignoreCase);
+    MIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), ignoreCase);
     return ret;
 }
 
@@ -332,7 +332,7 @@ int64_t StringAPI::indexof(const String &str, const String &subStr, int64_t star
         throw stringErrors::out_of_bounds(start, 0, str.strlen() - 1);
     }
     int32_t ret = -1;
-    StartIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), start, ignoreCase);
+    MStartIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), start, ignoreCase);
     return ret;
 }
 
@@ -351,35 +351,35 @@ int64_t StringAPI::indexof(const String &str, const String &subStr, int64_t star
         throw stringErrors::out_of_bounds(start + count, 0, str.strlen() - 1);
     }
     int32_t ret = -1;
-    StartCountIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), start, count, ignoreCase);
+    MStartCountIndexOf(&ret, str.get_ptr<char16_t>(), str.strlen(), subStr.get_ptr<char16_t>(), subStr.strlen(), start, count, ignoreCase);
     return ret;
 }
 
 bool StringAPI::startswith(const String &str, const String &valStr, bool ignoreCase)
 {
     uint8_t ret = 0;
-    StartsWith(&ret, str.get_ptr<char16_t>(), str.strlen(), valStr.get_ptr<char16_t>(), valStr.strlen(), ignoreCase);
+    MStartsWith(&ret, str.get_ptr<char16_t>(), str.strlen(), valStr.get_ptr<char16_t>(), valStr.strlen(), ignoreCase);
     return ret != 0;
 }
 
 bool StringAPI::endswith(const String &str, const String &valStr, bool ignoreCase)
 {
     uint8_t ret = 0;
-    EndsWith(&ret, str.get_ptr<char16_t>(), str.strlen(), valStr.get_ptr<char16_t>(), valStr.strlen(), ignoreCase);
+    MEndsWith(&ret, str.get_ptr<char16_t>(), str.strlen(), valStr.get_ptr<char16_t>(), valStr.strlen(), ignoreCase);
     return ret != 0;
 }
 
 int64_t StringAPI::compare(const String &str1, const String &str2)
 {
     int32_t ret = 0;
-    Compare(&ret, str1.get_ptr<char16_t>(), str1.strlen(), str2.get_ptr<char16_t>(), str2.strlen());
+    MCompare(&ret, str1.get_ptr<char16_t>(), str1.strlen(), str2.get_ptr<char16_t>(), str2.strlen());
     return ret;
 }
 
 String StringAPI::reverse(const String &str)
 {
     auto ret = String(str.strlen());
-    Reverse(ret.get_ptr<char16_t>(), str.get_ptr<char16_t>(), str.strlen());
+    MReverse(ret.get_ptr<char16_t>(), str.get_ptr<char16_t>(), str.strlen());
     return ret;
 }
 
@@ -390,13 +390,13 @@ String StringAPI::trim(const String &str, Side size)
     switch (size)
     {
     case Side::BOTH:
-        Trim(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen());
+        MTrim(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen());
         break;
     case Side::LEFT:
-        TrimStart(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen());
+        MTrimStart(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen());
         break;
     case Side::RIGHT:
-        TrimEnd(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen());
+        MTrimEnd(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen());
         break;
     }
     ret.set_length(out_len);
@@ -410,13 +410,13 @@ String StringAPI::trim(const String &str, const String &trim_str, Side size)
     switch (size)
     {
     case Side::BOTH:
-        TrimStr(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen(), trim_str.get_ptr<char16_t>(), trim_str.strlen());
+        MTrimStr(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen(), trim_str.get_ptr<char16_t>(), trim_str.strlen());
         break;
     case Side::LEFT:
-        TrimStartStr(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen(), trim_str.get_ptr<char16_t>(), trim_str.strlen());
+        MTrimStartStr(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen(), trim_str.get_ptr<char16_t>(), trim_str.strlen());
         break;
     case Side::RIGHT:
-        TrimEndStr(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen(), trim_str.get_ptr<char16_t>(), trim_str.strlen());
+        MTrimEndStr(ret.get_ptr<char16_t>(), &out_len, str.get_ptr<char16_t>(), str.strlen(), trim_str.get_ptr<char16_t>(), trim_str.strlen());
         break;
     }
     ret.set_length(out_len);
@@ -433,14 +433,14 @@ String StringAPI::trim(const String &str, const char16_t value, Side size)
 String StringAPI::tolower(const String &str)
 {
     auto ret = String(str.strlen());
-    ToLower(ret.get_ptr<char16_t>(), str.get_ptr<char16_t>(), str.strlen());
+    MToLower(ret.get_ptr<char16_t>(), str.get_ptr<char16_t>(), str.strlen());
     return ret;
 }
 
 String StringAPI::toupper(const String &str)
 {
     auto ret = String(str.strlen());
-    ToUpper(ret.get_ptr<char16_t>(), str.get_ptr<char16_t>(), str.strlen());
+    MToUpper(ret.get_ptr<char16_t>(), str.get_ptr<char16_t>(), str.strlen());
     return ret;
 }
 
@@ -459,21 +459,21 @@ String StringAPI::substring(const String &str, int64_t start, int64_t length)
         throw stringErrors::out_of_bounds(start + length, 0, str.strlen());
     }
     auto ret = String(length);
-    Substring(ret.get_ptr<char16_t>(), str.get_ptr<char16_t>(), str.strlen(), start, length);
+    MSubstring(ret.get_ptr<char16_t>(), str.get_ptr<char16_t>(), str.strlen(), start, length);
     return ret;
 }
 
 bool StringAPI::equals(const String &str1, const String &str2)
 {
     uint8_t ret = 0;
-    Equals(&ret, str1.get_ptr<char16_t>(), str1.strlen(), str2.get_ptr<char16_t>(), str2.strlen());
+    MEquals(&ret, str1.get_ptr<char16_t>(), str1.strlen(), str2.get_ptr<char16_t>(), str2.strlen());
     return ret != 0;
 }
 
 int8_t StringAPI::try_encoding_convert(const String &from, String &to, int64_t out_bytes)
 {
     int8_t ret;
-    ret = TryEncodingConvert(to.get_ptr<uint8_t>(), &out_bytes, from.get_ptr<uint8_t>(), from.strlen() * from.get_size(), static_cast<int32_t>(from.get_encoding()), static_cast<int32_t>(to.get_encoding()));
+    ret = MTryEncodingConvert(to.get_ptr<uint8_t>(), &out_bytes, from.get_ptr<uint8_t>(), from.strlen() * from.get_size(), static_cast<int32_t>(from.get_encoding()), static_cast<int32_t>(to.get_encoding()));
     if (ret == 1 && out_bytes < to.strlen())
     {
         to.set_length(out_bytes / to.get_size());
