@@ -1,5 +1,6 @@
 #include "../include/string.hpp"
-#include<gtest/gtest.h>
+#include <cstdio>
+#include <gtest/gtest.h>
 
 TEST(string, concat)
 {

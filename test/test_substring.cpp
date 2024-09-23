@@ -1,5 +1,5 @@
 #include "../include/string.hpp"
-#include<gtest/gtest.h>
+#include <gtest/gtest.h>
 TEST(string, substring)
 {
     char16_t str1[] = u"HELLO WORLD";
