@@ -1,9 +1,9 @@
 # ninja log v6
 109	496	7486080677306616	CMakeFiles/main.dir/C_/MString/src/errors.cpp.obj	ad8d690665d36152
 2294	2370	7478290562989401	lib/gmock_main.lib	abf1b0b7ad75faa7
-10	323	7486093978701686	CMakeFiles/main.dir/C_/MString/src/string.cpp.obj	7ec49d302e52edcd
+10	329	7487827944097360	CMakeFiles/main.dir/C_/MString/src/string.cpp.obj	7ec49d302e52edcd
 2216	2289	7478290562318969	lib/gtest_main.lib	2c915443d4fdf595
-447	623	7487618992742886	C:/MString/bin/main.exe	82b619f4de6ba8ef
+330	518	7487827947222058	C:/MString/bin/main.exe	82b619f4de6ba8ef
 103	889	7487618291607477	CMakeFiles/main.dir/C_/MString/test/test_substring.cpp.obj	70ce2ec8b1df3cb8
 84	849	7487618291419542	CMakeFiles/main.dir/C_/MString/test/test_replace.cpp.obj	583aee070084121b
 46	823	7487618290920976	CMakeFiles/main.dir/C_/MString/test/test_endswith.cpp.obj	d562affbe9a97fa0
@@ -23,5 +23,22 @@
 8	2124	7478290540157550	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	a04e702f85ac4c7b
 2126	2212	7478290561341538	lib/gtest.lib	e201f4639fd3ef3d
 2212	2294	7478290562179651	lib/gmock.lib	a9ac4fabe2eeac2f
-10	446	7487618988236425	CMakeFiles/main.dir/C_/MString/test/test_concat.cpp.obj	734a8a3a16cd5880
-11	1285	7487619379594982	build.ninja	3330a31ebcedb553
+25	507	7487824869595936	CMakeFiles/main.dir/C_/MString/test/test_concat.cpp.obj	734a8a3a16cd5880
+11	1285	7487832020578865	build.ninja	3330a31ebcedb553
+108	535	7487832044704467	CMakeFiles/main.dir/C_/MString/src/errors.cpp.obj	ad8d690665d36152
+117	695	7487832044794563	CMakeFiles/main.dir/C_/MString/src/string.cpp.obj	7ec49d302e52edcd
+41	812	7487832044032155	CMakeFiles/main.dir/C_/MString/test/test_endswith.cpp.obj	d562affbe9a97fa0
+24	885	7487832043802441	CMakeFiles/main.dir/C_/MString/test/test_concat.cpp.obj	734a8a3a16cd5880
+92	894	7487832044555490	CMakeFiles/main.dir/C_/MString/test/test_toupper.cpp.obj	d896b2ad11f292ef
+65	896	7487832044204120	CMakeFiles/main.dir/C_/MString/test/test_reverse.cpp.obj	fdb1fe5bc3747ea1
+15	897	7487832043780885	CMakeFiles/main.dir/C_/MString/test/test_compare.cpp.obj	e572a164ebcd8a2f
+47	920	7487832044090336	CMakeFiles/main.dir/C_/MString/test/test_equals.cpp.obj	33375b21c5ef0686
+59	922	7487832044204120	CMakeFiles/main.dir/C_/MString/test/test_replace.cpp.obj	583aee070084121b
+30	929	7487832043922990	CMakeFiles/main.dir/C_/MString/test/test_contains.cpp.obj	8c094bb5348b8baf
+35	949	7487832043972895	CMakeFiles/main.dir/C_/MString/test/test_encoding.cpp.obj	b31649aa36d50cbc
+53	951	7487832044150136	CMakeFiles/main.dir/C_/MString/test/test_indexof.cpp.obj	e61c8d54af4741e7
+71	959	7487832044204120	CMakeFiles/main.dir/C_/MString/test/test_startswith.cpp.obj	b3c511e111630909
+101	963	7487832044607383	CMakeFiles/main.dir/C_/MString/test/test_trim.cpp.obj	1330f50a7036ffec
+85	976	7487832044360382	CMakeFiles/main.dir/C_/MString/test/test_tolower.cpp.obj	1819b88eff34d80
+78	980	7487832044360382	CMakeFiles/main.dir/C_/MString/test/test_substring.cpp.obj	70ce2ec8b1df3cb8
+980	1168	7487832053428652	C:/MString/bin/main.exe	82b619f4de6ba8ef

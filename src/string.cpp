@@ -304,10 +304,12 @@ String StringAPI::concat(const String &str1, const String &str2)
 
 String StringAPI::replace(const String &str, const String &old_str, const String &new_str)
 {
-    int32_t match_numbers = match(str, old_str).size();
+    auto matches = match(str, old_str);
+    int32_t match_numbers = matches.size();
     int32_t out_len = str.strlen() + (new_str.strlen() - old_str.strlen()) * match_numbers;
     auto ret = String(out_len);
-    MReplace(ret.get_ptr<char16_t>(), out_len, str.get_ptr<char16_t>(), str.strlen(), old_str.get_ptr<char16_t>(), old_str.strlen(), new_str.get_ptr<char16_t>(), new_str.strlen());
+    if (!matches.empty())
+        MReplace(ret.get_ptr<char16_t>(), out_len, str.get_ptr<char16_t>(), str.strlen(), old_str.get_ptr<char16_t>(), old_str.strlen(), new_str.get_ptr<char16_t>(), new_str.strlen(), matches.data(), match_numbers);
     return ret;
 }
 

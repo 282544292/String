@@ -26,7 +26,7 @@ public class String
     }
 
     [UnmanagedCallersOnly(EntryPoint = "MReplace")]
-    public static unsafe void MReplace(ushort* ret, int outLen, ushort* str, int len, ushort* oldChar, int oldLen, ushort* newChar, int newLen)
+    public static unsafe void MReplace(ushort* ret, int outLen, ushort* str, int len, ushort* oldChar, int oldLen, ushort* newChar, int newLen, long *matches, int matchNumbers)
     {
         var strSpan = new Span<ushort>(str, len);
         var oldCharSpan = new Span<ushort>(oldChar, oldLen);
@@ -35,15 +35,14 @@ public class String
         int srcIndex = 0;
         int destIndex = 0;
         var resultSpan = new Span<ushort>(ret, outLen);
-        int index = strSpan.IndexOf(oldCharSpan);
-        while (index != -1)
+        for (int i = 0; i < matchNumbers; i++)
         {
+            int index = (int)matches[i];
             strSpan.Slice(srcIndex, index - srcIndex).CopyTo(resultSpan.Slice(destIndex));
             destIndex += index - srcIndex;
             srcIndex = index + oldCharSpan.Length;
             newCharSpan.CopyTo(resultSpan.Slice(destIndex));
             destIndex += newCharSpan.Length;
-            index = strSpan.Slice(srcIndex).IndexOf(oldCharSpan);
         }
     }
 

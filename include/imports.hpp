@@ -2,7 +2,7 @@
 #include <cstdint>
 
 extern "C" __declspec(dllimport) void MConcat(uint8_t * ret, uint8_t *str1, int32_t len1, uint8_t *str2, int32_t len2);
-extern "C" __declspec(dllimport) void MReplace(char16_t *ret, int32_t outLen, char16_t *str, int32_t len, char16_t *oldStr, int32_t oldLen, char16_t *newStr, int32_t newLen);
+extern "C" __declspec(dllimport) void MReplace(char16_t *ret, int32_t outLen, char16_t *str, int32_t len, char16_t *oldStr, int32_t oldLen, char16_t *newStr, int32_t newLen, int64_t *matches, int32_t matchNumbers);
 extern "C" __declspec(dllimport) void MContains(uint8_t *ret, char16_t *str, int32_t len, char16_t *subStr, int32_t subLen, uint8_t ignoreCase);
 extern "C" __declspec(dllimport) void MIndexOf(int32_t *ret, char16_t *str, int32_t len, char16_t *subStr, int32_t subLen, uint8_t ignoreCase);
 extern "C" __declspec(dllimport) void MStartIndexOf(int32_t *ret, char16_t *str, int32_t len, char16_t *subStr, int32_t subLen, int32_t start, uint8_t ignoreCase);

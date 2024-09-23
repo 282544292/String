@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.10)
 # 项目名称
 project(MString)
 
+# 导入 googletest
 include(FetchContent)
 FetchContent_Declare(
   googletest
