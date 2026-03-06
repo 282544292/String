@@ -219,7 +219,17 @@ uint8_t size(Encoding encoding)
         return 4;
     case Encoding::US_ASCII:
     case Encoding::ISO_8859_1:
+    case Encoding::ISO_8859_2:
+    case Encoding::ISO_8859_5:
+    case Encoding::ISO_8859_15:
     case Encoding::UTF8:
+    case Encoding::GBK:
+    case Encoding::Big5:
+    case Encoding::Shift_JIS:
+    case Encoding::EUC_KR:
+    case Encoding::Windows_1250:
+    case Encoding::Windows_1251:
+    case Encoding::Windows_1252:
         return 1;
     default:
         throw stringErrors::unsupported_encoding();
