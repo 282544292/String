@@ -14,10 +14,20 @@ enum class Encoding : int32_t
 {
     UTF16_LE = 1200,
     UTF16_BE = 1201,
+    Shift_JIS = 932,
+    GBK = 936,
+    Big5 = 950,
+    EUC_KR = 949,
+    Windows_1250 = 1250,
+    Windows_1251 = 1251,
+    Windows_1252 = 1252,
     UTF32LE = 12000,
     UTF32BE = 12001,
     US_ASCII = 20127,
     ISO_8859_1 = 28591,
+    ISO_8859_2 = 28592,
+    ISO_8859_5 = 28595,
+    ISO_8859_15 = 28605,
     UTF8 = 65001,
 };
 
